@@ -1,11 +1,11 @@
 // Function to fetch weather data from OpenWeatherMap API
 async function getWeather() {
-    const apiKey = 'YOUR_API_KEY'; // Replace with your API key from OpenWeatherMap
+    const apiKey = 'cebbbaf84df241ebbfa111453241506'; // Replace with your API key from OpenWeatherMap
     const city = document.getElementById('city-input').value;
-    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}';
+    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=cebbbaf84df241ebbfa111453241506 &q=India}`;
 
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch('http://api.weatherapi.com/v1/current.json?key=cebbbaf84df241ebbfa111453241506 &q=India');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
